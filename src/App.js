@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import {Message} from './components/Message'
+import "./app.css"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const messagesList = [
+        "Первое сообщение",
+        "Второе сообщение",
+        "Третье сообщение",
+    ];
+    return (
+        <div className="app">
+            <h2>
+                Одно сообщение:
+            </h2>
+            <Message text="Привет! Это тестовое сообщение"/>
+            <h2>
+                Список:
+            </h2>
+            {messagesList.map((item, index) => <Message text={item} user_num={index} key={index}/>)}
+            <div style={{clear: 'both'}} />
+        </div>
+    );
 }
 
 export default App;
