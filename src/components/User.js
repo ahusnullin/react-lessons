@@ -10,11 +10,9 @@ export class User extends Component {
         this.state = {
             num: 1,
         }
-        this.changeAvatar = this.changeAvatar.bind(this);
-    }
-
-    changeAvatar() {
-        this.setState({ num: this.state.num + 1})
+        this.changeAvatar = () => {
+            this.setState({ num: this.state.num + 1})
+        }
     }
 
     render() {
