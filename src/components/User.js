@@ -13,10 +13,6 @@ export class User extends Component {
         this.changeAvatar = this.changeAvatar.bind(this);
     }
 
-    componentDidMount() {
-        this.setState({ num: this.props.num  || 1 })
-    }
-
     changeAvatar() {
         this.setState({ num: this.state.num + 1})
     }
