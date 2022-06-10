@@ -1,0 +1,43 @@
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -khtml-border-radius: @radius;
+}
+
+.form_wrapper {
+  background:#ebf2ff;
+  padding:15px;
+  .border-radius();
+  margin:20px 0;
+  display:flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  textarea {
+    padding:10px;
+    font:14px Arial, "Open Sans";
+    width:100%;
+    .border-radius();
+    border:1px solid #dae3ff;
+    outline:none;
+
+    &:hover{
+      border:1px solid #CCC;
+    }
+  }
+
+  button {
+    border:0;
+    background: #486bff;
+    padding:10px 20px;
+    font-weight: bold;
+    color:#FFF;
+    .border-radius();
+    cursor:pointer;
+
+    &:hover{
+      background:#3a4aff;
+    }
+  }
+}

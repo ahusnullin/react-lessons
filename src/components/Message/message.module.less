@@ -1,0 +1,34 @@
+.border-radius (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+    -khtml-border-radius: @radius;
+}
+
+.message{
+    border-bottom:1px solid #EEE;
+    padding:0 0 15px 0;
+    margin:15px 0 20px 0;
+    float:left;
+    width:100%;
+}
+
+.avatar{
+    width:50px;
+    float:left;
+
+    img {
+        width:100%;
+        .border-radius(50%);
+    }
+}
+
+.text{
+    margin-left:70px;
+}
+
+.author_name{
+    font-size:13px;
+    font-weight: bold;
+    margin:0 0 5px 0;
+}
