@@ -18,7 +18,7 @@ export const Form: FC<FormProps> = ({ sendMessage }) => {
   const handleClick = () => {
     sendMessage({ author: Me, text: message });
     if (textarea && textarea.current) {
-        textarea.current.value = '';
+      textarea.current.value = '';
     }
   };
 

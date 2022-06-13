@@ -69,6 +69,8 @@ export const App: FC = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.content}>
+        <h1 data-testid="chat-header">Наш чат</h1>
+
         {messagesList.map((data, index) => (
           <Message data={data} key={index} />
         ))}

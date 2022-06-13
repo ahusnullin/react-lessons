@@ -9,7 +9,7 @@ interface MessageProps {
 
 export const Message: FC<MessageProps> = ({ data }) => {
   return (
-    <div className={style.message}>
+    <div className={style.message} data-testid="message-item">
       <div className={style.avatar}>
         <img src="https://picsum.photos/id/18/100" alt="" />
       </div>
