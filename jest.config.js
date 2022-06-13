@@ -45,10 +45,10 @@ module.exports = {
     // coverageThreshold: undefined,
     coverageThreshold: {
         global: {
-            branches: 60,
-            functions: 50,
-            lines: 60,
-            statements: 60,
+            branches: 10,
+            functions: 10,
+            lines: 10,
+            statements: 10,
         },
     },
     // A path to a custom dependency extractor
@@ -73,9 +73,7 @@ module.exports = {
     // maxWorkers: "50%",
 
     // An array of directory names to be searched recursively up from the requiring module's location
-    // moduleDirectories: [
-    //   "node_modules"
-    // ],
+     moduleDirectories: ['node_modules', 'src'],
 
     // An array of file extensions your modules use
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
@@ -119,9 +117,9 @@ module.exports = {
     // rootDir: undefined,
 
     // A list of paths to directories that Jest should use to search for files in
-     roots: [
-       "<rootDir>"
-     ],
+    // roots: [
+    //   "<rootDir>"
+    // ],
 
     // Allows you to use a custom runner instead of Jest's default test runner
     // runner: "jest-runner",
@@ -177,6 +175,7 @@ module.exports = {
     // transform: undefined,
     transform: {
         '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest',
+        ".+\\.(less)$": "jest-transform-stub"
     },
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [
