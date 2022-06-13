@@ -73,7 +73,7 @@ export const App: FC = () => {
           <Message data={data} key={index} />
         ))}
         <Form sendMessage={sendMessage} />
-        <div style={{ clear: 'both' }}></div>
+        <div style={{ clear: 'both' }}> </div>
       </div>
     </div>
   );

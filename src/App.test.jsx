@@ -5,6 +5,7 @@ import { Form } from 'components/Form/Form';
 
 describe('App', () => {
   it('render component', () => {
-    render(<Form sendMessage={() => {}} />);
+    const mockHandler = jest.fn();
+    render(<Form sendMessage={mockHandler} />);
   });
 });

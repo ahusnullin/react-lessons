@@ -5,11 +5,14 @@ import { Form } from 'components/Form/Form';
 
 describe('Form', () => {
   it('Render submit button', () => {
-    render(<Form sendMessage={() => {}} />);
+    const mockHandler = jest.fn();
+    render(<Form sendMessage={mockHandler} />);
     expect(screen.getByText(/Отправить/)).toBeInTheDocument();
   });
+
   it('Render textarea', () => {
-    render(<Form />);
+    const mockHandler = jest.fn();
+    render(<Form sendMessage={mockHandler} />);
     expect(screen.getByTestId('form-textarea')).toBeInTheDocument();
   });
 
@@ -17,7 +20,7 @@ describe('Form', () => {
 
   it('Check sendMessage', async () => {
     const mockHandler = jest.fn();
-    render(<Form sendMessage={() => {}} />);
+    render(<Form sendMessage={mockHandler} />);
 
     userEvent.keyboard('test');
 

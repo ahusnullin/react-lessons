@@ -1,6 +1,6 @@
 import { useState, useRef, FC } from 'react';
 import style from './form.module.less';
-import { MessageInterface, UserInterface } from '../../common-types';
+import { MessageInterface, UserInterface } from 'src/common-types';
 
 interface FormProps {
   sendMessage: (msg: MessageInterface) => void;
@@ -13,11 +13,13 @@ const Me: UserInterface = {
 
 export const Form: FC<FormProps> = ({ sendMessage }) => {
   const [message, setMessage] = useState('');
-  const textarea = useRef<HTMLTextAreaElement>();
+  const textarea = useRef<HTMLTextAreaElement>(null);
 
   const handleClick = () => {
     sendMessage({ author: Me, text: message });
-    textarea.current.value = '';
+    if (textarea && textarea.current) {
+        textarea.current.value = '';
+    }
   };
 
   return (

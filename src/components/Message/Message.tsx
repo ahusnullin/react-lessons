@@ -1,9 +1,9 @@
 import style from './message.module.less';
 import { FC } from 'react';
-import { MessageInterface } from '../../common-types';
+import { MessageInterface } from 'src/common-types';
 
 interface MessageProps {
-  data: MessageInterface[];
+  data: MessageInterface;
   key: number;
 }
 
